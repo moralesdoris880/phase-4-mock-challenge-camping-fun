@@ -38,7 +38,7 @@ function Home() {
     <div>
       <h2>Activities</h2>
       <ul>
-        {activities.map((activity) => (
+        {activities.map((activity) => 
           <li key={activity.id}>
             <span>
               {activity.name} | Difficulty: {activity.difficulty}
@@ -47,19 +47,19 @@ function Home() {
               Delete
             </button>
           </li>
-        ))}
+        )}
       </ul>
       <hr />
       <h2>Campers</h2>
       <ul>
-        {campers.map((camper) => (
+        {campers.map((camper) =>
           <li key={camper.id}>
             <span>
               {camper.name}, age {camper.age}
             </span>
             <Link to={`/campers/${camper.id}`}>View Activities</Link>
           </li>
-        ))}
+        )}
       </ul>
       <hr />
       <NewCamper onAddCamper={handleAddCamper} />
